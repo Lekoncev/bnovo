@@ -12,33 +12,33 @@ $countries = ["Россия", "Абхазия", "Австралия", "Авст�
 <link rel="stylesheet" href="../css/style.css">
 
 <div class="some-form">
-    <form action="../bin/create.php" method="post" class="form js-form-validate">
+    <form action="" method="post" class="form js-form-validate">
         <div class="some-form__header title">Добавить нового Пользователя</div>
 
         <div class="some-form__line">
-            <input type="text" name="name" placeholder="Имя гостя *" pattern="[a-zA-Zа-яА-ЯёЁ ]+"
+            <input type="text" name="name" id="name" placeholder="Имя гостя *" pattern="[a-zA-Zа-яА-ЯёЁ ]+"
                    title="Имя может содержать только буквы A-z,А-я" data-validate>
             <span class="some-form__hint">Обязательно для заполнения</span>
         </div>
         <div class="some-form__line">
-            <input type="text" name="surname" placeholder="Фамилия гостя *" pattern="[a-zA-Zа-яА-ЯёЁ ]+"
+            <input type="text" name="surname" id="surname" placeholder="Фамилия гостя *" pattern="[a-zA-Zа-яА-ЯёЁ ]+"
                    title="Имя может содержать только буквы A-z,А-я" data-validate>
             <span class="some-form__hint">Обязательно для заполнения</span>
         </div>
         <div class="some-form__line">
-            <input type="text" name="lastname" placeholder="Отчество гостя *" pattern="[a-zA-Zа-яА-ЯёЁ ]+"
+            <input type="text" name="lastname" id="lastname" placeholder="Отчество гостя *" pattern="[a-zA-Zа-яА-ЯёЁ ]+"
                    title="Имя может содержать только буквы A-z,А-я" >
             <span class="some-form__hint">Обязательно для заполнения</span>
         </div>
         <div class="some-form__line">
-            <input type="tel" name="number" placeholder="Телефон * " pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$" data-validate>
+            <input type="tel" name="number" id="number" placeholder="Телефон * " pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$" data-validate>
             <span class="some-form__hint">Обязательно для заполнения</span>
         </div>
         <div class="some-form__line">
-            <input type="email" name="email" placeholder="E-mail">
+            <input type="email" name="email" id="email" placeholder="E-mail">
         </div>
         <div class="some-form__line">
-            <select name="country">
+            <select name="country" id="country">
                 <?php foreach($countries as $country): ?>
                     <option value="<?=$country?>"><?=$country?></option>
                 <?php endforeach; ?>
@@ -46,7 +46,7 @@ $countries = ["Россия", "Абхазия", "Австралия", "Авст�
         </div>
 
         <div class="some-form__submit">
-            <input type="submit" value="Отправить" class="button button_submit button_wide">
+            <input type="submit" value="Отправить" class="button button_submit button_wide" onclick="addPost()">
         </div>
     </form>
 </div>
@@ -55,7 +55,4 @@ $countries = ["Россия", "Абхазия", "Австралия", "Авст�
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/jquery.inputmask.min.js"></script>
 <script src="../js/numbermask.js"></script>
-
-<?php
-
-?>
+<script src="../js/main.js"></script>

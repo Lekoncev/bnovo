@@ -1,7 +1,5 @@
 <?php
 
-//Добавление нового продукта
-
 /*
  * Подключаем файл для получения соединения к базе данных (PhpMyAdmin, MySQL)
  */
@@ -20,7 +18,7 @@ $email = $_POST['email'];
 $country = $_POST['country'];
 
 /*
- * Делаем запрос на добавление новой строки в таблицу products
+ * Делаем запрос на добавление новой строки в таблицу
  */
 
 $sql = "INSERT INTO `guest` (`name`, `surname`, `lastname`, `number`, `email`, `country`) VALUES (:name, :surname, :lastname,

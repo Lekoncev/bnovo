@@ -47,24 +47,13 @@ require_once '../config/connect.php';
 
         <?php
 
-            /*
-             * Делаем выборку всех строк из таблицы "products"
-             */
-
             $sql = "SELECT * FROM `guest`";
             $stmt = $pdo->query($sql);
             $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
-            /*
-             * Преобразовываем полученные данные в нормальный массив
-             */
-
-
             /*
              * Перебираем массив и рендерим HTML с данными из массива
              */
-
 
         foreach ($users as $user) {
             ?>

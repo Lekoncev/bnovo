@@ -15,14 +15,6 @@
     $sql = "SELECT * FROM `guest` WHERE id = $product_id";
     $stmt = $pdo->query($sql);
     $users = $stmt->fetch(PDO::FETCH_ASSOC);
-    /*
-     * Делаем выборку строки с полученным ID выше
-     */
-
-    /*
-     * Преобразовывем полученные данные в нормальный массив
-     * Используя функцию mysqli_fetch_assoc массив будет иметь ключи равные названиям столбцов в таблице
-     */
 
 ?>
 
